@@ -1,6 +1,24 @@
 import React from 'react';
 import './stockpage.css';
 import TopHeader from './../TopHeader/topheader';
+import { DataGrid, GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
+
+const columns: GridColDef[]= [
+    { field: 'id', headerName: 'Part No.', width: 70 },
+    { field: 'category', headerName: 'Category', width: 100 },
+    { field: 'productName', headerName: 'Product Name', width: 100 },
+    { field: 'hsn', headerName: 'HSN/SAC', width: 70 },
+    { field: 'gst', headerName: 'GST Rate', width: 70, type: "percentage" },
+    { field: 'quantity', headerName: 'Quantity', width: 70 },
+    { field: 'productRate', headerName: 'Product Rate', width: 70 },
+    { field: 'purchaseDate', headerName: 'Product Date', width: 100 },
+  ];
+
+  const rows = [
+    { id: 123, category: 'TVS', productName: 'TVS Air Filter', hsn: 999, gst: "18%", quantity: 2, productRate: "300", purchaseDate: "2023-04-04" },
+    { id: 124, category: 'TVS', productName: 'Bajaj Air Filter', hsn: 989, gst: "18%", quantity: 2, productRate: "300", purchaseDate: "2023-05-05" },
+  ];
+  
 
 const stockpage = () => {
   return (
@@ -23,80 +41,19 @@ const stockpage = () => {
                 </div>
                 
                 <div className='stock-table'>
-                    <table>
-                        <tr>
-                            <th>Part No.</th>
-                            <th>Category</th>
-                            <th>Product Name</th>
-                            <th>HSN/SAC</th>
-                            <th>GST Rate</th>
-                            <th>Quantity</th>
-                            <th>Product Rate</th>
-                            <th>Purchase Date</th>
-                            <th>Delete</th>
-                            <th>Update</th>
-                        </tr>
-                        <tr>
-                            <td>1234</td>
-                            <td>TVS</td>
-                            <td>TVS Air Filter</td>
-                            <td>9999</td>
-                            <td>18%</td>
-                            <td>5</td>
-                            <td>300</td>
-                            <td>02-02-22</td>
-                            <td><button className='stock-delete'>Delete</button></td>
-                            <td><button className='stock-update'>Update</button></td>
-                        </tr>
-                        <tr>
-                            <td>1234</td>
-                            <td>TVS</td>
-                            <td>TVS Air Filter</td>
-                            <td>9999</td>
-                            <td>18%</td>
-                            <td>5</td>
-                            <td>300</td>
-                            <td>02-02-22</td>
-                            <td><button className='stock-delete'>Delete</button></td>
-                            <td><button className='stock-update'>Update</button></td>
-                        </tr>
-                        <tr>
-                            <td>1234</td>
-                            <td>TVS</td>
-                            <td>TVS Air Filter</td>
-                            <td>9999</td>
-                            <td>18%</td>
-                            <td>5</td>
-                            <td>300</td>
-                            <td>02-02-22</td>
-                            <td><button className='stock-delete'>Delete</button></td>
-                            <td><button className='stock-update'>Update</button></td>
-                        </tr>
-                        <tr>
-                            <td>1234</td>
-                            <td>TVS</td>
-                            <td>TVS Air Filter</td>
-                            <td>9999</td>
-                            <td>18%</td>
-                            <td>5</td>
-                            <td>300</td>
-                            <td>02-02-22</td>
-                            <td><button className='stock-delete'>Delete</button></td>
-                            <td><button className='stock-update'>Update</button></td>
-                        </tr>
-                        <tr>
-                            <td>1234</td>
-                            <td>TVS</td>
-                            <td>TVS Air Filter</td>
-                            <td>9999</td>
-                            <td>18%</td>
-                            <td>5</td>
-                            <td>300</td>
-                            <td>02-02-22</td>
-                            <td><button className='stock-delete'>Delete</button></td>
-                            <td><button className='stock-update'>Update</button></td>
-                        </tr>
-                    </table>
+                    <div style={{ height: 400, width: '100%' }}>
+                    <DataGrid
+                        rows={rows}
+                        columns={columns}
+                        initialState={{
+                        pagination: {
+                            paginationModel: { page: 0, pageSize: 5 },
+                        },
+                        }}
+                        pageSizeOptions={[5, 10]}
+                        checkboxSelection
+                    />
+                    </div>
                 </div>
             </div>
             <div className='stockpage-sidebar'>
