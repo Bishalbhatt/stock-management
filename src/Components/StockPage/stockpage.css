@@ -1,0 +1,85 @@
+.stockpage-head{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-evenly;
+    background: #2cf42c;
+}
+.stockpage-head h2{
+    /* justify-self: center; */
+}
+.stockpage-head button{
+    width: 140px;
+    height: 35px;
+    background: #FFEB3B;
+    border: none;
+    font-weight: 600;
+    border-radius: 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.category select{
+    background-color: orange;
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.category button{
+    background-color: orange;
+    width: 150px;
+    height: 30px;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.stockpage-main{
+    margin: 10px 20px;
+    display:  flex;
+    justify-content: space-around;
+}
+.stock-table table,td,th{
+    border: 1px solid black;
+}
+.stock-table td,th{
+    padding: 5px;
+}
+
+.stock-table th{
+    background: #1091f7;
+}
+.stock-table .stock-delete{
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+.stock-table .stock-update{
+    background-color: #2cf42c;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.stockpage-sidebar{
+    background: #1091f7;
+    padding: 20px;
+}
+.stockpage-sidebar button{
+    display: block;
+    margin-bottom: 10px;
+    width: 100px;
+    font-size: 18px;
+    padding: 5px;
+    background-color: #065592;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+}

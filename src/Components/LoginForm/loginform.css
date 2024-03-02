@@ -1,0 +1,48 @@
+.loginform{
+    background-color: #1091f7;
+    /* margin: 100px; */
+    margin: 100px auto;
+    height: 250px;
+    width: 350px;
+    /* text-align: center; */
+    padding: 20px 10px;
+    border-radius: 20px;
+    border: 5px solid black;
+}
+.loginform h2{
+    text-align: center;
+    border-bottom: 1px dashed black;
+    padding-bottom: 10px;
+}
+.loginform label{
+    color: white;
+    font-size: 20px;
+    text-align: left;
+}
+.loginform input[type=text],input[type=password]{
+    color: black;
+    /* font-size: 20px; */
+    height: 25px;
+    border-radius: 20px;
+    border-color: transparent;
+    margin-left: 10px;
+    text-indent: 10px;
+}
+.username,.password{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.submit-btn{
+    text-align: center;
+}
+
+.submit-btn button{
+   font-size: 18px;
+   margin-left: 5px;
+   background: orange;
+   padding: 5px 10px;
+   border-radius: 10px;
+   cursor: pointer;
+}

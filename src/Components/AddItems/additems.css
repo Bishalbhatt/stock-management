@@ -1,0 +1,51 @@
+.additems-heading{
+    background: #2cf42c;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0 0 50px;
+}
+
+.additems-form{
+    background: #1091f7;
+    padding: 20px 30px;
+    height: 350px;
+    width: 320px;
+    margin: 0 auto;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    text-align: center;
+}
+
+.additems-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.additems-input input{
+    justify-self: center;
+    margin-left: 10px;
+    height: 25px;
+    border-radius: 20px;
+    border: none;
+    text-indent: 10px;
+}
+
+.additems-input label{
+    justify-self: center;
+    margin-left: 10px;
+    height: 20px;
+    border-radius: 20px;
+    border: none;
+    text-indent: 10px;
+}
+
+.additems-form button{
+    background: orange;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
